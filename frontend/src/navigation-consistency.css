@@ -1,0 +1,416 @@
+/*
+ * TATHYA-DF shared navigation system
+ * Reference: Investigation / Knowledge Graph sidebar (24 Nov 2026)
+ * Keeps the charcoal + amber identity, icon-led rows and consistent type scale.
+ */
+:root {
+  --td-nav-bg: #11151a;
+  --td-nav-line: #2d343d;
+  --td-nav-text: #bec7d4;
+  --td-nav-text-strong: #e5e9ed;
+  --td-nav-amber: #feb700;
+  --td-nav-amber-soft: #ffdb9d;
+  --td-nav-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+  --td-nav-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Dashboard + New Investigation share one sidebar geometry. */
+.dossier-layout {
+  grid-template-columns: 255px minmax(0, 1fr) !important;
+}
+.dossier-rail {
+  width: 255px !important;
+  min-width: 255px !important;
+  max-width: 255px !important;
+  padding: 22px 0 18px !important;
+  background: var(--td-nav-bg) !important;
+  border-right: 1px solid var(--td-nav-line) !important;
+  font-family: var(--td-nav-sans) !important;
+}
+.dossier-rail-intro {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  min-height: 56px;
+  padding: 0 24px 18px !important;
+  margin: 0 0 17px !important;
+  border-bottom: 1px solid var(--td-nav-line) !important;
+}
+.dossier-rail-number {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  min-width: 22px;
+  height: 24px;
+  overflow: hidden;
+  color: transparent !important;
+  font-size: 0 !important;
+}
+.dossier-rail-number::before {
+  content: 'shield';
+  color: var(--td-nav-text-strong);
+  font-family: 'Material Symbols Outlined';
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1;
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+.dossier-rail-intro strong {
+  display: block;
+  color: var(--td-nav-text-strong) !important;
+  font-family: var(--td-nav-sans) !important;
+  font-size: 21px !important;
+  font-weight: 650 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -.025em !important;
+}
+.dossier-rail-intro small {
+  display: block;
+  margin-top: 4px !important;
+  color: var(--td-nav-text) !important;
+  font-family: var(--td-nav-mono) !important;
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase;
+}
+.dossier-rail-label {
+  padding: 0 24px !important;
+  margin: 12px 0 8px !important;
+  color: #7f8b98 !important;
+  font-family: var(--td-nav-mono) !important;
+  font-size: 9px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  letter-spacing: .13em !important;
+  text-transform: uppercase;
+}
+.dossier-nav-item,
+.dossier-rail-action {
+  position: relative;
+  display: flex !important;
+  align-items: center !important;
+  gap: 13px !important;
+  width: 100% !important;
+  min-height: 48px !important;
+  height: 48px;
+  padding: 0 24px !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-right: 4px solid transparent !important;
+  border-left: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: var(--td-nav-text) !important;
+  font-family: var(--td-nav-mono) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  letter-spacing: .075em !important;
+  text-align: left !important;
+  text-transform: uppercase !important;
+  cursor: pointer;
+  transition: background .16s ease, color .16s ease, border-color .16s ease;
+}
+.dossier-nav-item > span,
+.dossier-rail-action > span {
+  display: none !important;
+}
+.dossier-nav-item::before,
+.dossier-rail-action::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 21px;
+  width: 21px;
+  height: 22px;
+  color: currentColor;
+  font-family: 'Material Symbols Outlined';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: normal;
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+.dossier-rail > button:nth-of-type(1)::before { content: 'folder_open'; }
+.dossier-rail > button:nth-of-type(2)::before { content: 'add'; }
+.dossier-rail > button:nth-of-type(3)::before { content: 'hub'; }
+.dossier-rail > button:nth-of-type(4)::before { content: 'history'; }
+.dossier-nav-item:hover,
+.dossier-rail-action:hover {
+  background: rgba(255,255,255,.035) !important;
+  color: var(--td-nav-text-strong) !important;
+}
+.dossier-nav-item.is-current {
+  border-right-color: var(--td-nav-amber) !important;
+  background: rgba(254,183,0,.10) !important;
+  color: var(--td-nav-amber-soft) !important;
+}
+.dossier-nav-item.is-current::before { color: var(--td-nav-amber-soft); }
+.dossier-rail-action { text-decoration: none !important; }
+.dossier-rail-rule {
+  height: 1px !important;
+  margin: 16px 24px !important;
+  background: var(--td-nav-line) !important;
+}
+.dossier-rail-foot {
+  margin-top: auto !important;
+  padding: 13px 24px 0 !important;
+  border-top: 1px solid var(--td-nav-line) !important;
+}
+.dossier-rail-foot p {
+  color: #84909c !important;
+  font-family: var(--td-nav-sans) !important;
+  font-size: 10px !important;
+  line-height: 1.55 !important;
+}
+
+/* Place New Investigation where it appears in the Knowledge Graph sidebar:
+   directly below Unit 01, as the prominent outlined action. */
+.dossier-rail { display: flex !important; flex-direction: column !important; }
+.dossier-rail > .dossier-rail-intro { order: 1; }
+.dossier-rail > button:nth-of-type(2) {
+  order: 2;
+  width: auto !important;
+  min-height: 47px !important;
+  height: 47px;
+  margin: 7px 24px 18px !important;
+  padding: 0 13px !important;
+  border: 1px solid rgba(254,183,0,.34) !important;
+  border-right: 1px solid rgba(254,183,0,.34) !important;
+  border-radius: 5px !important;
+  background: rgba(254,183,0,.055) !important;
+  color: var(--td-nav-amber-soft) !important;
+  justify-content: center !important;
+}
+.dossier-rail > button:nth-of-type(2):hover {
+  border-color: rgba(254,183,0,.7) !important;
+  background: rgba(254,183,0,.11) !important;
+}
+.dossier-rail > div:nth-of-type(2) { order: 3; }
+.dossier-rail > button:nth-of-type(1) { order: 4; }
+.dossier-rail > div:nth-of-type(3) { order: 5; }
+.dossier-rail > div:nth-of-type(4) { order: 6; }
+.dossier-rail > button:nth-of-type(3) { order: 7; }
+.dossier-rail > button:nth-of-type(4) { order: 8; }
+.dossier-rail > .dossier-rail-foot { order: 9; }
+
+/* Investigation / Knowledge Graph sidebar is the reference layout.
+   Keep its graph filters and navigation logic; standardise their appearance. */
+.scanline-grid > header {
+  height: 64px !important;
+  min-height: 64px !important;
+  padding: 0 24px !important;
+  background: #11151a !important;
+  border-bottom: 1px solid var(--td-nav-line) !important;
+  backdrop-filter: none !important;
+}
+.scanline-grid > header > div:first-child > span {
+  font-family: var(--td-nav-sans) !important;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  letter-spacing: .06em !important;
+  line-height: 1 !important;
+}
+.scanline-grid > header nav a {
+  font-family: var(--td-nav-sans) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+.scanline-grid > div.flex.flex-1 > aside {
+  width: 255px !important;
+  min-width: 255px !important;
+  max-width: 255px !important;
+  padding: 22px 0 18px !important;
+  background: var(--td-nav-bg) !important;
+  border-right: 1px solid var(--td-nav-line) !important;
+  backdrop-filter: none !important;
+}
+.scanline-grid > div.flex.flex-1 > aside > div:first-child {
+  padding: 0 24px !important;
+  margin: 0 0 17px !important;
+}
+.scanline-grid > div.flex.flex-1 > aside > div:first-child .material-symbols-outlined {
+  width: 22px;
+  font-size: 21px !important;
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24 !important;
+}
+.scanline-grid > div.flex.flex-1 > aside > div:first-child > div > div:first-child {
+  color: var(--td-nav-text-strong) !important;
+  font-family: var(--td-nav-sans) !important;
+  font-size: 21px !important;
+  font-weight: 650 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -.025em !important;
+}
+.scanline-grid > div.flex.flex-1 > aside > div:first-child > div > div:last-child {
+  margin-top: 4px;
+  color: var(--td-nav-text) !important;
+  font-family: var(--td-nav-mono) !important;
+  font-size: 10px !important;
+  font-weight: 400 !important;
+  letter-spacing: .08em !important;
+}
+.scanline-grid > div.flex.flex-1 > aside > div:first-child > button {
+  min-height: 47px !important;
+  margin-top: 22px !important;
+  padding: 0 13px !important;
+  border: 1px solid rgba(254,183,0,.34) !important;
+  border-radius: 5px !important;
+  background: rgba(254,183,0,.055) !important;
+  color: var(--td-nav-amber-soft) !important;
+  font-family: var(--td-nav-mono) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: .075em !important;
+  text-transform: uppercase;
+}
+.scanline-grid > div.flex.flex-1 > aside > div.flex-1 > div.px-6.py-2 {
+  padding: 0 24px !important;
+  margin: 0 0 10px !important;
+}
+.scanline-grid > div.flex.flex-1 > aside input {
+  min-height: 37px;
+  padding: 0 9px 0 39px !important;
+  border: 1px solid #303a45 !important;
+  border-radius: 6px !important;
+  background: #0d1116 !important;
+  color: var(--td-nav-text-strong) !important;
+  font-family: var(--td-nav-mono) !important;
+  font-size: 10px !important;
+  letter-spacing: .04em !important;
+}
+.scanline-grid > div.flex.flex-1 > aside input::placeholder { color: #74808c !important; }
+.scanline-grid > div.flex.flex-1 > aside > div.flex-1 > button {
+  display: flex !important;
+  align-items: center !important;
+  gap: 13px !important;
+  min-height: 48px !important;
+  height: 48px;
+  padding: 0 24px !important;
+  border: 0 !important;
+  border-right: 4px solid transparent !important;
+  border-radius: 0 !important;
+  background: transparent;
+  color: var(--td-nav-text) !important;
+  font-family: var(--td-nav-mono) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  letter-spacing: .075em !important;
+  text-transform: uppercase;
+}
+.scanline-grid > div.flex.flex-1 > aside > div.flex-1 > button:hover {
+  background: rgba(255,255,255,.035) !important;
+  color: var(--td-nav-text-strong) !important;
+}
+.scanline-grid > div.flex.flex-1 > aside > div.flex-1 > button[style*="background"] {
+  border-right-color: var(--td-nav-amber) !important;
+  background: rgba(254,183,0,.10) !important;
+  color: var(--td-nav-amber-soft) !important;
+}
+.scanline-grid > div.flex.flex-1 > aside > div.flex-1 > button > .material-symbols-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 21px;
+  width: 21px;
+  font-size: 20px !important;
+  line-height: 1 !important;
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24 !important;
+}
+.scanline-grid > div.flex.flex-1 > aside > div.mt-auto {
+  padding-top: 12px !important;
+  border-top: 1px solid var(--td-nav-line) !important;
+}
+.scanline-grid > div.flex.flex-1 > aside > div.mt-auto a {
+  min-height: 39px;
+  padding: 0 24px !important;
+  color: var(--td-nav-text) !important;
+  font-family: var(--td-nav-mono) !important;
+  font-size: 10px !important;
+  letter-spacing: .08em !important;
+  text-transform: uppercase;
+}
+.scanline-grid > div.flex.flex-1 > aside > div.mt-auto a .material-symbols-outlined {
+  display: inline-flex;
+  width: 21px;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px !important;
+}
+
+/* Shared application top bars: one height, type scale and brand treatment. */
+.dossier-masthead {
+  height: 64px !important;
+  min-height: 64px !important;
+  padding: 0 24px !important;
+  background: #11151a !important;
+  border-bottom: 1px solid var(--td-nav-line) !important;
+  box-shadow: none !important;
+}
+.dossier-wordmark-main { font-size: 22px !important; font-weight: 800 !important; letter-spacing: .055em !important; }
+.dossier-wordmark-divider { font-size: 21px !important; }
+.dossier-wordmark-suffix { font-size: 11px !important; font-weight: 800 !important; letter-spacing: .1em !important; }
+.dossier-masthead-context { font-family: var(--td-nav-sans) !important; font-size: 12px !important; }
+.dossier-masthead-right { font-family: var(--td-nav-sans) !important; }
+.dossier-avatar { font-family: var(--td-nav-sans) !important; }
+.reconstruction-page > header {
+  height: 64px !important;
+  min-height: 64px !important;
+  padding: 0 24px !important;
+  background: #11151a !important;
+  border-bottom: 1px solid var(--td-nav-line) !important;
+}
+
+/* Global typography rule: Geist for interface, JetBrains Mono only for IDs. */
+.dossier-app, .case-intake-app, .reconstruction-page, .scanline-grid {
+  font-family: var(--td-nav-sans) !important;
+}
+.dossier-rail button, .dossier-rail a,
+.scanline-grid > div.flex.flex-1 > aside button,
+.scanline-grid > div.flex.flex-1 > aside a,
+.case-intake-mobile-nav button {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@media (max-width: 760px) {
+  .dossier-layout { grid-template-columns: minmax(0,1fr) !important; }
+  .dossier-rail { display: none !important; }
+  .scanline-grid > div.flex.flex-1 > aside { width: 64px !important; min-width: 64px !important; max-width: 64px !important; }
+  .scanline-grid > div.flex.flex-1 > aside > div:first-child { padding: 0 10px !important; }
+  .scanline-grid > div.flex.flex-1 > aside > div:first-child > div { display: none !important; }
+  .scanline-grid > div.flex.flex-1 > aside > div:first-child > button,
+  .scanline-grid > div.flex.flex-1 > aside > div.flex-1 > button { justify-content: center !important; padding: 0 8px !important; }
+  .scanline-grid > div.flex.flex-1 > aside > div.flex-1 > button > span:not(.material-symbols-outlined) { display: none !important; }
+  .scanline-grid > div.flex.flex-1 > aside input,
+  .scanline-grid > div.flex.flex-1 > aside > div.mt-auto { display: none !important; }
+}
+
+/* Match the Unit 01 identity block shown in the Knowledge Graph reference. */
+.dossier-rail-intro strong {
+  font-size: 0 !important;
+  line-height: 1 !important;
+}
+.dossier-rail-intro strong::before {
+  content: 'Unit 01';
+  color: var(--td-nav-text-strong);
+  font-family: var(--td-nav-sans);
+  font-size: 21px;
+  font-weight: 650;
+  letter-spacing: -.025em;
+}
+.dossier-rail-intro small {
+  font-size: 0 !important;
+  line-height: 1.4 !important;
+}
+.dossier-rail-intro small::before {
+  content: 'FORENSIC DIVISION';
+  color: var(--td-nav-text);
+  font-family: var(--td-nav-mono);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .08em;
+}

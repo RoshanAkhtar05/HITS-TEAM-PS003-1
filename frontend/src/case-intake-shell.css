@@ -1,0 +1,49 @@
+/* Case intake shares the exact dashboard shell and typography. */
+.case-intake-app { min-height: 100vh; }
+.case-intake-main { padding-top: 22px; }
+.case-intake-main .dossier-page-topline { align-items: center; }
+.case-intake-live-dot {
+  display: inline-block; width: 6px; height: 6px; margin: 0 0 1px 7px;
+  border-radius: 50%; background: var(--td-green);
+  box-shadow: 0 0 0 4px rgba(134,196,154,.09);
+}
+.case-intake-page-content { min-width: 0; }
+.case-intake-page-header {
+  gap: 24px; margin: 20px 0 24px !important; padding: 0 0 20px;
+  border-bottom: 1px solid var(--td-line);
+}
+.case-intake-page-header h1 {
+  margin: 0 0 7px !important; color: var(--td-text) !important;
+  font-size: clamp(25px, 2.4vw, 31px) !important; font-weight: 730 !important;
+  line-height: 1.15 !important; letter-spacing: -.04em !important;
+}
+.case-intake-description {
+  margin: 0 0 12px; color: var(--td-muted); font-size: 12px; line-height: 1.6;
+}
+.case-intake-session { color: var(--td-subtle) !important; font-size: 9px !important; letter-spacing: .1em !important; }
+.case-intake-page-header > div:last-child { align-items: flex-end !important; }
+.case-intake-page-header button { min-height: 38px; border-radius: 7px !important; font-size: 11px !important; font-weight: 700 !important; }
+.case-intake-page-header #initialize-unit-btn { min-width: 184px; }
+.case-intake-app .dossier-rail { position: sticky; top: 0; height: calc(100vh - 64px); align-self: start; }
+.case-intake-app .dossier-nav-item,
+.case-intake-app .dossier-rail-static { font-family: var(--td-font) !important; }
+.case-intake-app main h2 { font-size: 17px !important; }
+@media (max-width: 760px) {
+  .case-intake-page-header { align-items: flex-start !important; flex-direction: column; margin-top: 18px !important; }
+  .case-intake-page-header > div:last-child { width: 100%; align-items: flex-start !important; }
+  .case-intake-page-header > div:last-child > div { flex-wrap: wrap; }
+}
+
+.case-intake-mobile-nav { display: none; }
+@media (max-width: 760px) {
+  .case-intake-mobile-nav {
+    position: fixed; z-index: 60; right: 0; bottom: 0; left: 0; display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; padding: 8px 10px max(8px, env(safe-area-inset-bottom));
+    border-top: 1px solid var(--td-line); background: rgba(17,21,26,.97); backdrop-filter: blur(14px);
+  }
+  .case-intake-mobile-nav button { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 5px 2px; border: 0; border-radius: 5px; background: transparent; color: var(--td-muted); font-size: 10px; font-weight: 600; }
+  .case-intake-mobile-nav button span { color: var(--td-subtle); font-family: var(--td-mono) !important; font-size: 8px; }
+  .case-intake-mobile-nav button.is-current { background: rgba(242,185,59,.10); color: var(--td-amber-soft); }
+  .case-intake-mobile-nav button.is-current span { color: var(--td-amber); }
+  .case-intake-page-content { padding-bottom: 72px; }
+}
