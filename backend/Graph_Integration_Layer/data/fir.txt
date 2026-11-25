@@ -1,0 +1,13 @@
+Summary of Reported Incident:
+A fictional complainant reports a series of unexpected digital financial transfers and related communications occurring on 22 May 2026 in the Park Street area of Kolkata. The materials supplied for this demonstration refer to Dev Ahuja, Mira Das, Kabir Roy and Neel Basu. The records below are scenario inputs only; they do not establish identity, participation, intent or guilt. The investigation hypothesis to be examined is whether the transfer activity, communications, device observations and reported locations are connected.
+
+Persons referenced in supplied scenario materials:
+1. Dev Ahuja — referenced in CDR records as associated with phone 1000000001 and device ANDROID_001. The supplied bank records reference account ACC1001. These links are synthetic scenario assumptions for testing.
+2. Mira Das — referenced in CDR and communication records with phone 1000000002 and email address mira.das@example.invalid. These links are synthetic scenario assumptions for testing.
+3. Kabir Roy — referenced in CDR and communication records with phone 1000000003 and wearable device WATCH_ABC. These links are synthetic scenario assumptions for testing.
+4. Neel Basu — referenced in CDR and bank records with phone 1000000004 and receiving account ACC9001. These links are synthetic scenario assumptions for testing.
+
+Reported locations:
+Park Street, Kolkata was the primary coordination point. Howrah Station served as the cash handoff location. Accounts linked to Delhi and Mumbai were also used, suggesting a wider network beyond Kolkata.
+
+Legal classification: Not assigned in this synthetic demonstration. Any real legal assessment requires authorised investigators and applicable procedures.

@@ -1,0 +1,62 @@
+[
+  {
+    "post_id": "demo_post_001",
+    "platform": "twitter",
+    "author_handle": "@demo_dev_ahuja",
+    "author_name": "Dev Ahuja",
+    "timestamp": "2026-05-22 20:40:00 +0530",
+    "content": "Big plans for tonight near Park Street. @demo_mira_das keep the account ready. All systems go.",
+    "mentions": ["@demo_mira_das"],
+    "hashtags": ["kolkata", "tonight"]
+  },
+  {
+    "post_id": "demo_post_002",
+    "platform": "instagram",
+    "author_handle": "@demo_mira_das",
+    "author_name": "Mira Das",
+    "timestamp": "2026-05-22 21:10:00 +0530",
+    "content": "Waiting near Park Street. Dev Ahuja said Kabir Roy will confirm after the call. Everything on schedule.",
+    "mentions": ["@demo_dev_ahuja"],
+    "hashtags": ["meet", "kolkata"]
+  },
+  {
+    "post_id": "demo_post_003",
+    "platform": "facebook",
+    "author_handle": "@demo_kabir_roy",
+    "author_name": "Kabir Roy",
+    "timestamp": "2026-05-22 22:05:00 +0530",
+    "content": "Reached Howrah Station after the withdrawal. Device WATCH_ABC is still on. Job done.",
+    "mentions": [],
+    "hashtags": ["movement", "done"]
+  },
+  {
+    "post_id": "demo_post_004",
+    "platform": "twitter",
+    "author_handle": "@demo_dev_ahuja",
+    "author_name": "Dev Ahuja",
+    "timestamp": "2026-05-22 20:15:00 +0530",
+    "content": "Using ANDROID_001 tonight. Transfers split as planned across 7 accounts. @demo_mira_das confirm receipt.",
+    "mentions": ["@demo_mira_das"],
+    "hashtags": ["transfer", "plan"]
+  },
+  {
+    "post_id": "demo_post_005",
+    "platform": "instagram",
+    "author_handle": "@demo_mira_das",
+    "author_name": "Mira Das",
+    "timestamp": "2026-05-22 22:45:00 +0530",
+    "content": "All clear. @demo_kabir_roy handled the delivery perfectly. Neel Basu confirmed receipt at Howrah.",
+    "mentions": ["@demo_kabir_roy"],
+    "hashtags": ["success"]
+  },
+  {
+    "post_id": "demo_post_006",
+    "platform": "facebook",
+    "author_handle": "@demo_kabir_roy",
+    "author_name": "Kabir Roy",
+    "timestamp": "2026-05-22 21:00:00 +0530",
+    "content": "Parked the white Hyundai XX00XX0001 near Park Street. Waiting for signal from Dev Ahuja.",
+    "mentions": [],
+    "hashtags": ["standby", "kolkata"]
+  }
+]

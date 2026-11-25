@@ -1,0 +1,35 @@
+[
+  {
+    "event_id": "OS-TREPLAY-001",
+    "event_type": "call",
+    "caller_phone": "1000000001",
+    "receiver_phone": "1000000004",
+    "timestamp": "2026-05-22T21:05:00+05:30",
+    "duration_seconds": 94,
+    "call_type": "OUTGOING",
+    "cell_tower": "TWR_KOL_102",
+    "confidence": 1.0
+  },
+  {
+    "event_id": "OS-TREPLAY-002",
+    "event_type": "transfer",
+    "sender_account": "ACC1001",
+    "receiver_account": "ACC9001",
+    "amount": 9400,
+    "transaction_id": "OS-STREAM-TXN-002",
+    "timestamp": "2026-05-22T21:16:00+05:30",
+    "device_id": "ANDROID_001",
+    "status": "SUCCESS",
+    "confidence": 1.0
+  },
+  {
+    "event_id": "OS-TREPLAY-003",
+    "event_type": "location",
+    "device_id": "ANDROID_001",
+    "latitude": 22.5727,
+    "longitude": 88.364,
+    "timestamp": "2026-05-22T21:22:00+05:30",
+    "accuracy_meters": 6.5,
+    "confidence": 0.98
+  }
+]

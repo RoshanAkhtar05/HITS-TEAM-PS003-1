@@ -1,0 +1,50 @@
+From: Dev Ahuja <dev.ahuja@example.invalid>
+To: Mira Das <mira.das@example.invalid>
+Subject: Tonight's Operation - Final Plan
+Date: Fri, 22 May 2026 19:45:00 +0530
+
+Mira Das,
+
+Everything is in place for tonight. Meet me at Park Street at 9 PM.
+
+The transfer will go through ACC1001. I have confirmed with Neel Basu that the receiving accounts are active. We split across 7 accounts - all transfers below 9500 to stay under the radar.
+
+Kabir Roy will handle the physical collection at Howrah Station after 10:30 PM. Make sure he has the contact there.
+
+Use only 1000000001 for calls tonight. Do not use email after this. Delete this message.
+
+-Dev Ahuja
+
+---
+
+From: Mira Das <mira.das@example.invalid>
+To: Dev Ahuja <dev.ahuja@example.invalid>
+Subject: Re: Tonight's Operation - Final Plan
+Date: Fri, 22 May 2026 20:10:00 +0530
+
+Dev Ahuja,
+
+Understood. I will be at Park Street by 8:55 PM.
+
+Neel Basu confirmed all accounts are ready. I have spoken with Kabir Roy. He will position himself near Park Street at 9 PM and then move to Howrah after the transfers complete.
+
+One concern - the Kia Black (XX00XX0002) will be parked outside Park Street as backup. The Hyundai White (XX00XX0001) will drive Kabir Roy to Howrah Station.
+
+See you tonight.
+
+-Mira Das
+
+---
+
+From: Dev Ahuja <dev.ahuja@example.invalid>
+To: Mira Das <mira.das@example.invalid>
+Subject: Vehicle Confirmation
+Date: Fri, 22 May 2026 20:25:00 +0530
+
+Mira Das,
+
+Confirmed. Also the red Yamaha (XX00XX0003) will be used by Neel Basu as lookout near the station.
+
+Contact me only on 1000000001 if anything changes.
+
+-Dev Ahuja

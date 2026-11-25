@@ -1,0 +1,13 @@
+source_entity,target_entity,relation,confidence,evidence
+Dev Ahuja,1000000001,USES_PHONE,0.99,Synthetic demo annotation: SIM registration records
+Dev Ahuja,ANDROID_001,USES_DEVICE,0.97,Synthetic demo annotation: Device seizure - forensic report
+Dev Ahuja,ACC1001,OWNS_ACCOUNT,0.99,Synthetic demo annotation: Bank KYC documents
+Dev Ahuja,dev.ahuja@example.invalid,USES_EMAIL,0.96,Synthetic demo annotation: Recovered from seized laptop
+Mira Das,1000000002,USES_PHONE,0.94,Synthetic demo annotation: Witness statement + SIM records
+Mira Das,mira.das@example.invalid,USES_EMAIL,0.95,Synthetic demo annotation: Email ownership verification
+Kabir Roy,1000000003,USES_PHONE,0.92,Synthetic demo annotation: Call pattern analysis + SIM registration
+Kabir Roy,WATCH_ABC,USES_DEVICE,0.91,Synthetic demo annotation: Wearable device ownership confirmed
+Neel Basu,1000000004,USES_PHONE,0.88,Synthetic demo annotation: SIM registered to Neel Basu
+Neel Basu,ACC9001,OWNS_ACCOUNT,0.90,Synthetic demo annotation: Bank KYC - account holder Neel Basu
+Park Street,22.5726,LOCATED_AT,0.93,Synthetic demo annotation: Geo coordinate mapping - Survey of India
+Howrah Station,22.5850,LOCATED_AT,0.91,Synthetic demo annotation: GIS mapping - Railway Authority records
